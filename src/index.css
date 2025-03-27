@@ -1,0 +1,15 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 3rem;
+  text-align: center;
+}
