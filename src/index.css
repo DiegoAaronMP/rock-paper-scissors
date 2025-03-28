@@ -13,3 +13,8 @@ body {
   margin: 3rem;
   text-align: center;
 }
+
+.buttons-container {
+  justify-content: center;
+  text-align: center;
+}
