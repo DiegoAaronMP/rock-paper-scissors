@@ -4,15 +4,15 @@ export const Buttons = () => {
     <div className="buttons-container">
         <p>Choose an option</p>
 
-        <button>
+        <button className="button">
             Rock
         </button>
 
-        <button>
+        <button className="button">
             Papper
         </button>
 
-        <button>
+        <button className="button">
             Scissors
         </button>
     </div>
