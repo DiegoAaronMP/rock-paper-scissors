@@ -39,3 +39,14 @@ body {
 .button:active {
   transform: scale(1.15);
 }
+
+.versus {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.gamezone-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

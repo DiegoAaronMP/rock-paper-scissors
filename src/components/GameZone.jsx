@@ -7,7 +7,7 @@ export const GameZone = () => {
             <span>Player: 0</span>
         </div>
 
-        <p>Vs.</p>
+        <p className="versus">Vs.</p>
 
         <div>
             <span>Computer: 0</span>
