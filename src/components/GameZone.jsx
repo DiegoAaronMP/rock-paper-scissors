@@ -2,16 +2,18 @@
 
 export const GameZone = () => {
   return (
-    <div className="gamezone-container">
+    <section className="gamezone-container">
         <div>
-            <span>Player: 0</span>
+            <span className="gamezone-score-text">Player: 0</span>
+            <div className="gamezone-emoji-container"></div>
         </div>
 
         <p className="versus">Vs.</p>
 
         <div>
-            <span>Computer: 0</span>
+            <span className="gamezone-score-text">Computer: 0</span>
+            <div className="gamezone-emoji-container"></div>
         </div>
-    </div>
+    </section>
   )
 }
