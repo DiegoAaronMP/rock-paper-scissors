@@ -1,7 +1,7 @@
 
 export const Buttons = () => {
   return (
-    <div className="buttons-container">
+    <section className="buttons-container">
         <p>Choose an option</p>
 
         <button className="button">
@@ -15,6 +15,6 @@ export const Buttons = () => {
         <button className="button">
             ✌️
         </button>
-    </div>
+    </section>
   )
 }
