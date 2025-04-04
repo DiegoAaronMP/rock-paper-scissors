@@ -7,6 +7,7 @@ export const useGame = () => {
     const [computerHand, setComputerHand] = useState('');
     const [playerCounter, setPlayerCounter] = useState(0);
     const [computerCounter, setComputerCounter] = useState(0);
+    const [resultMessage, setResultMessage] = useState('');
 
     const playGame = (hand) => {
         setPlayerHand(hand);        
@@ -15,24 +16,30 @@ export const useGame = () => {
         setComputerHand(cpuHand);
         
         if (hand === cpuHand ) {
-            console.log('tie');
+            setResultMessage("It's a tie!");
             return;
         } else if (hand === 'rock' && cpuHand === 'paper') {
+            setResultMessage('Computer wins!');
             setComputerCounter(counter => counter + 1);
             return;
         } else if (hand === 'rock' && cpuHand === 'scissors') {
+            setResultMessage('Player wins!');
             setPlayerCounter(counter => counter + 1);
             return;
         } else if (hand === 'paper' && cpuHand === 'scissors') {
+            setResultMessage('Computer wins!');
             setComputerCounter(counter => counter + 1);
             return;
         } else if (hand === 'paper' && cpuHand === 'rock') {
+            setResultMessage('Player wins!');
             setPlayerCounter(counter => counter + 1);
             return;
         } else if (hand === 'scissors' && cpuHand === 'rock') {
+            setResultMessage('Computer wins!');
             setComputerCounter(counter => counter + 1);
             return;
         } else {
+            setResultMessage('Player wins!');
             setPlayerCounter(counter => counter + 1);
             return;
         }
@@ -43,6 +50,7 @@ export const useGame = () => {
         playerCounter,
         computerHand,
         computerCounter,
+        resultMessage,
         playGame
     }
 }
