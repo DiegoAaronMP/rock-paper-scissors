@@ -7,12 +7,12 @@ const hands = [
 export const Buttons = ({game}) => {
   
   return (
-    <section className="buttons-container">
-        <p>Choose an option</p>
+    <section className="buttons-container" aria-label="Choose your move">
+        <h2>Choose an option</h2>
 
         {
           hands.map(({ type, emoji }) => (
-            <button key={type} onClick={() => game(type)} className="button">
+            <button key={type} onClick={() => game(type)} aria-label={type} className="button">
               {emoji}
             </button>
           ))
