@@ -1,6 +1,25 @@
-import { useState } from "react"
+import { useState } from "react";
 
 const hands = ['rock', 'paper', 'scissors'];
+
+const determineWinner = (player, computer) => {
+    // Determines if it is a tie
+    if (player === computer) return "tie";
+
+    // The object structure looks like this.
+    // player's hand (winner hand): loser hand 
+    // rocks beats scissors
+    const wins = {
+        rock: "scissors",
+        paper: "rock",
+        scissors: "paper"
+    };
+
+    // Determines the winner
+    // * wins[rock] === computer
+    // *    'scissors' === 'scissors'
+    return wins[player] === computer ? "player" : "computer";
+};
 
 export const useGame = () => {
     const [playerHand, setPlayerHand] = useState('');
