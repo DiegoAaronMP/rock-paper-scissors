@@ -1,4 +1,9 @@
 
+const handToEmoji = {
+  rock: "👊",
+  paper: "✋",
+  scissors: "✌️"
+}
 
 export const GameZone = ({playerHand, playerCounter, computerHand, computerCounter}) => {
   return (
@@ -6,15 +11,7 @@ export const GameZone = ({playerHand, playerCounter, computerHand, computerCount
         <div>
             <span className="gamezone-score-text">Player: {playerCounter}</span>
             <div className="gamezone-emoji-container">
-              {
-                playerHand === 'rock' 
-                  ? '👊'
-                  : playerHand === 'paper'
-                  ? '✋' 
-                  : playerHand === 'scissors'
-                  ? '✌️'
-                  : ''
-              }
+              { handToEmoji[playerHand] || '' }
             </div>
         </div>
 
@@ -22,17 +19,9 @@ export const GameZone = ({playerHand, playerCounter, computerHand, computerCount
 
         <div>
             <span className="gamezone-score-text">Computer: {computerCounter}</span>
-        <div className="gamezone-emoji-container">
-          {
-            computerHand === 'rock'
-              ? '👊'
-              : computerHand === 'paper'
-              ? '✋'
-              : computerHand === 'scissors'
-              ? '✌️'
-              : ''
-          }
-        </div>
+            <div className="gamezone-emoji-container">
+                { handToEmoji[computerHand] || '' }
+            </div>
         </div>
     </section>
   )
