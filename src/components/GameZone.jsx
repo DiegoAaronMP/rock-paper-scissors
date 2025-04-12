@@ -7,7 +7,7 @@ const handToEmoji = {
 
 export const GameZone = ({playerHand, playerCounter, computerHand, computerCounter}) => {
   return (
-    <section className="gamezone-container">
+    <section className="gamezone-container" aria-label="Game status">
         <div>
             <span className="gamezone-score-text">Player: {playerCounter}</span>
             <div className="gamezone-emoji-container">
