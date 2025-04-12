@@ -15,14 +15,14 @@ function RPSApp() {
   } = useGame();
 
   return (
-    <>
+    <main>
       <h1 className="title">Rock, Paper, Scissors</h1>
       <p className="game-result">{resultMessage}</p>
       
       <GameZone playerCounter={playerCounter} playerHand={playerHand} computerHand={computerHand} computerCounter={computerCounter} />
       
       <Buttons game={playGame}/>
-    </>
+    </main>
   )
 }
 
