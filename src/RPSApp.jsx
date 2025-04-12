@@ -16,8 +16,13 @@ function RPSApp() {
 
   return (
     <main>
-      <h1 className="title">Rock, Paper, Scissors</h1>
-      <p className="game-result">{resultMessage}</p>
+      <header>
+        <h1 className="title">Rock, Paper, Scissors</h1>
+      </header>
+      
+      <section aria-live="polite">
+        <p className="game-result">{resultMessage}</p>
+      </section>
       
       <GameZone playerCounter={playerCounter} playerHand={playerHand} computerHand={computerHand} computerCounter={computerCounter} />
       
