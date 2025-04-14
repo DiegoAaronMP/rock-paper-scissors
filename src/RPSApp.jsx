@@ -15,7 +15,7 @@ function RPSApp() {
   } = useGame();
 
   return (
-    <main>
+    <main className="wrapper">
       <header>
         <h1 className="title">Rock, Paper, Scissors</h1>
       </header>
