@@ -1,21 +1,23 @@
+const hands = [
+  { type: 'rock', emoji: '👊' },
+  { type: 'paper', emoji: '✋' },
+  { type: 'scissors', emoji: '✌️' }
+];
 
 export const Buttons = ({game}) => {
   
   return (
-    <section className="buttons-container">
-        <p>Choose an option</p>
+    <section className="buttons-container" aria-label="Choose your move">
+        <h2>Choose an option</h2>
 
-        <button onClick={() => game('rock')} className="button">
-            👊
-        </button>
+        {
+          hands.map(({ type, emoji }) => (
+            <button key={type} onClick={() => game(type)} aria-label={type} className="button">
+              {emoji}
+            </button>
+          ))
+        }
 
-        <button onClick={() => game('paper')} className="button">
-            ✋
-        </button>
-
-        <button onClick={() => game('scissors')} className="button">
-            ✌️
-        </button>
     </section>
   )
 }
